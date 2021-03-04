@@ -1,0 +1,38 @@
+/* Hero MainVisual CSS */
+
+.hero_main_wrap {
+    width: 100%;
+    height: auto; 
+}
+
+.swiper_container {
+    width: 100%;
+    height: auto;  
+}
+
+.swiper_container_1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cont_box {
+    position: absolute;
+    width: 100%;
+    padding: 0 150px;
+    top: calc(50% - 140px);
+    z-index: 1;
+    color: rgb(255, 255, 255);
+}
+
+.main_button_link {
+    display: block;
+    background-image: url(../img/main_slide_btn.png);
+    width: 299px;
+    height: 46px;
+    margin: 30px 0 0 0;
+    background-size: contain;
+}
+
+video { position: relative; }
+
