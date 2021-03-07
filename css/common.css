@@ -41,14 +41,16 @@ body {
     font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: #222; 
+    color: rgb(30, 30, 30);
     line-height: 1.3; 
-    letter-spacing: -0.3; }
+    letter-spacing: -0.3;
+}
 
 /* font style */
 
 h3 { 
     font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
     font-size: 48px;
-    line-height: 68px; }
+    line-height: 68px;
+}
 

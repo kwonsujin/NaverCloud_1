@@ -1,6 +1,6 @@
 .header_wrap { width: 100%; height: auto; padding: 29px 150px; 
 display: flex; justify-content: space-between; background-color: rgba(0, 0, 0, 0.6);
-position: fixed; z-index: 999;}
+position: fixed; z-index: 3;}
 
 .gnb_logo a { display: block; background-image: url(../img/main_logo_w.svg); 
 width: 182px; height: 20px; background-repeat: no-repeat; }
