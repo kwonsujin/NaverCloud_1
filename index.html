@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,56 +9,118 @@
     <meta name="application-name" content="navercloudcorp.com">
 
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/cloud.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reset.css">
+    
+    <!-- 네이버 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="img/navercloud_favicon.ico">
 
     <title>Naver Cloud 네이버 클라우드</title>
 </head>
-<body>
-    <header>
-        <!-- gnb 메뉴 부분 -->
-        <nav class="header_wrap">
-            <div class="gnb_logo">
-                <a href=""></a>
-            </div>
+<body onscroll="scrollEvent();">
 
-            <div class="gnb_menu_wrap">
-                <ul class="gnb_menu">
-                    <li class="gnb_menu_item">
-                        <a href="">홈</a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="">소개</a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="">클라우드</a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="media_pressrelease/index.html">미디어</a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="">채용<span></span></a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="">제휴<span></span></a>
-                    </li>
-                    <li class="gnb_menu_item">
-                        <a href="">네이버클라우드 플랫폼<span></span></a>
-                    </li>
-                </ul>
-                
-                <div class="gnb_lang">
-                    <a href=""></a>
+    <!-- 네이버 상단 header 부분 -->
+    <header>
+
+        <!-- PC gnb 메뉴 부분 -->
+        <nav class="header_wrap" id="navbar">
+            <div class="header">
+                <div class="gnb_logo">
+                    <a id="logo" href="./index.html"></a>
+                </div>
+
+                <div class="gnb_menu_wrap">
+                    <ul class="gnb_menu">
+                        <li class="gnb_menu_item">
+                            <a class="item" href="./index.html">홈</a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="">소개</a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="">클라우드</a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="./media/media_pressrelease/index.html">미디어</a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="">채용<span></span></a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="">제휴<span></span></a>
+                        </li>
+                        <li class="gnb_menu_item">
+                            <a class="item" href="">네이버클라우드 플랫폼<span></span></a>
+                        </li>
+                    </ul>
+                    
+                    <div class="gnb_lang active">
+                        <a id="lang_img" href="javascript:"></a>
+                        <ul id="langUL">
+                            <li>
+                                <a href="" class="active">한국어</a>
+                            </li>
+                            <li>
+                                <a href="" class="en">English</a>
+                            </li>
+                            <li>
+                                <a href="" class="jp">일본어</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Mobile gnb 메뉴 부분 -->
+        <nav class="m_header_wrap" id="m_navbar">
+            <div>
+                <div class="m_header">
+                    <div class="m_gnb_logo">
+                        <a class="m_gnb_logo_w" id="m_gnb_logo_w" href="./index.html"></a>
+                        <a class="m_gnb_logo_g" href="./index.html"></a>
+                    </div>
+
+                    <div class="m_lang_menu_wrap">
+                        <div class="m_gnb_lang mactive">
+                            <a class="lang_img" id="m_lang_img" href="javascript:doDisplay();"></a>
+                            <ul id="mlangUL">
+                                <li>
+                                    <a href="" class="active">한국어</a>
+                                </li>
+                                <li>
+                                    <a href="" class="en">English</a>
+                                </li>
+                                <li>
+                                    <a href="" class="jp">일본어</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="m_gnb_menu">
+                            <span onclick="menuOpen();" id="gnb_m_menuopen"></span>
+                            <span onclick="menuClose();" id="gnb_m_menuclose"></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="m_menu_sub">
+                    <li><a href="./index.html">홈</a></li>
+                    <li><a href="">소개</a></li>
+                    <li><a href="">클라우드</a></li>
+                    <li><a href="./media/media_pressrelease/index.html">미디어</a></li>
+                    <li><a href="">채용</a></li>
+                    <li><a href="">제휴</a></li>
+                    <li><a href="">네이버 클라우드 플랫폼</a></li>
+                </ul>
+            </div>
+        </nav>
+
     </header>
-    
-    <!-- Hero Mainvisual 부분 -->
+
     <main>
+        <!-- Hero Mainvisual 부분 -->
         <div class="hero_main_wrap">
             <div class="hero_main">
                 <div class="hero_slide_wrap">
@@ -75,16 +137,16 @@
                     </div>
                     <div class="slide_2">
                         <div class="cont_box">
-                            <h3>개인용 스토리지 '네이버 클라우드'가<br>
-                            '네이버 MYBOX'로 변경되었습니다.</h3>
-                            <a href=""></a>
+                            <h3>개인용 스토리지<br class="m_br"> '네이버 클라우드'가<br>
+                            '네이버 MYBOX'로<br class="m_br"> 변경되었습니다.</h3>
+                            <a href="">네이버 MYBOX 바로가기</a>
                         </div>
                     </div>
                     <div class="slide_3">
                         <div class="cont_box">
                             <h3>클라우드를 '직접' 만듭니다<br>
                             클라우드를 '함께' 만듭니다</h3>
-                            <a href=""></a>
+                            <a href="">채용 바로가기</a>
                         </div>
                     </div>
                 </div>
@@ -92,21 +154,24 @@
                     <div class="swiper_button_prev"></div>
                     <div class="swiper_button_next"></div>
                 </div>
-            </div>
-            <div class="next_sect_btn">
-                <button></button>
+                
+                <div class="button-btn visible">
+                    <button type="button" class="mo-hide" id="subBtnNextOne">
+                        <span class="hide-txt">scroll down</span>
+                    </button>
+                </div>
             </div>
         </div>
 
     <!-- 네이버 클라우드 소개 부분 -->
-        <section>
+        <section id="section_1">
             <div class="cloud_introduce">
                 <div class="introduce_cont">
-                    <p class="eyebrow">네이버 클라우드는</p>
+                    <p class="eyebrow">네이버클라우드는</p>
                     <h3>
                         <span>고객과 가장 가까운 곳에서<br>
                         성장의 돌파구를 마련하는</span><br>
-                        대한민국 대표 클라우드 기업입니다
+                        대한민국 대표<br class="m_br"> 클라우드 기업입니다
                     </h3>
                     <div class="black_btn">
                         <a href="">소개 바로가기</a>
@@ -117,24 +182,121 @@
 
         
     <!-- 네이버 클라우스 서비스 안내 부분 -->
-        <section>
+        <section id="section_2">
             <div class="cloud_service">
                 <div class="service_cont">
                     <div class="cont_box_left">
-                        <p class="eyebrow">네이버 클라우드는</p>
+                        <p class="eyebrow">네이버클라우드는</p>
                         <h3>
-                            다양한 산업과<br>
+                            다양한 산업과<br class="m_br_none">
                             규모에 맞춘<br>
-                            솔루션 서비스<span>로<br>
-                            고객의 비즈니스를<br>
+                            솔루션 서비스<span>로<br class="m_br_none">
+                            고객의 비즈니스를<br class="m_br_none">
                             성공으로 이끕니다</span>
                         </h3>
                         <div class="black_btn">
                             <a href="">서비스 바로가기</a>
                         </div>
                     </div>
-                    <div class="cont_box_right">
-                        <ul class="row_1">
+
+                    <!-- PC 롤링 이미지 애니메이션 부분 -->
+                    <div class="pc_cont_box_right">
+                        <ul class="pc_row_1">
+                            <li>
+                                <p>AI</p>
+                                <img class="pc" src="./img/loop_02.jpg">
+                            <li>
+                                <p>Education</p>
+                                <img class="pc" src="./img/loop_04.jpg">
+                            </li>
+                            <li>
+                                <p>Finance</p>
+                                <img class="pc" src="./img/loop_06.jpg">
+                            </li>
+                            <li>
+                                <p>Media</p>
+                                <img class="pc" src="./img/loop_08.jpg">
+                            </li>
+                            <li>
+                                <p>Work</p>
+                                <img class="pc" src="./img/loop_10.jpg">
+                            </li>
+                            <li>
+                                <p>Hybrid Cloud</p>
+                                <img class="pc" src="./img/loop_12.jpg">
+                            </li>
+                            <li>
+                                <p>AI</p>
+                                <img src="./img/loop_02.jpg">
+                            </li>
+                            <li>
+                                <p>Education</p>
+                                <img src="./img/loop_04.jpg">
+                            </li>
+                            <li>
+                                <p>Finance</p>
+                                <img src="./img/loop_06.jpg">
+                            </li>
+                            <li>
+                                <p>Media</p>
+                                <img src="./img/loop_08.jpg">
+                            </li>
+                            <li>
+                                <p>Work</p>
+                                <img src="./img/loop_10.jpg">
+                            </li>
+                            <li>
+                                <p>Hybrid Cloud</p>
+                                <img src="./img/loop_12.jpg">
+                            </li>
+                            <li>
+                                <p>AI</p>
+                                <img src="./img/loop_02.jpg">
+                            </li>
+                            <li>
+                                <p>Education</p>
+                                <img src="./img/loop_04.jpg">
+                            </li>
+                            <li>
+                                <p>Finance</p>
+                                <img src="./img/loop_06.jpg">
+                            </li>
+                            <li>
+                                <p>Media</p>
+                                <img src="./img/loop_08.jpg">
+                            </li>
+                            <li>
+                                <p>Work</p>
+                                <img src="./img/loop_10.jpg">
+                            </li>
+                            <li>
+                                <p>Hybrid Cloud</p>
+                                <img src="./img/loop_12.jpg">
+                            </li>
+                            <li>
+                                <p>AI</p>
+                                <img src="./img/loop_02.jpg">
+                            </li>
+                            <li>
+                                <p>Education</p>
+                                <img src="./img/loop_04.jpg">
+                            </li>
+                            <li>
+                                <p>Finance</p>
+                                <img src="./img/loop_06.jpg">
+                            </li>
+                            <li>
+                                <p>Media</p>
+                                <img src="./img/loop_08.jpg">
+                            </li>
+                            <li>
+                                <p>Work</p>
+                                <img src="./img/loop_10.jpg">
+                            </li>
+                            <li>
+                                <p>Hybrid Cloud</p>
+                                <img src="./img/loop_12.jpg">
+                            </li>
                             <li>
                                 <p>AI</p>
                                 <img src="./img/loop_02.jpg">
@@ -184,7 +346,8 @@
                                 <img src="./img/loop_12.jpg">
                             </li>
                         </ul>
-                        <ul class="row_2">
+                        
+                        <ul class="pc_row_2">
                             <li>
                                 <p>E-commerce</p>
                                 <img src="./img/loop_01.jpg">
@@ -207,48 +370,498 @@
                             </li>
                             <li>
                                 <p>Big Data</p>
-                                <img src="./img/loop_10.jpg">
+                                <img src="./img/loop_11.jpg">
+                            </li>
+                            <li>
+                                <p>E-commerce</p>
+                                <img src="./img/loop_01.jpg">
+                            </li>
+                            <li>
+                                <p>Healthcare</p>
+                                <img src="./img/loop_03.jpg">
+                            </li>
+                            <li>
+                                <p>Public Sector</p>
+                                <img src="./img/loop_05.jpg">
+                            </li>
+                            <li>
+                                <p>Game</p>
+                                <img src="./img/loop_07.jpg">
+                            </li>
+                            <li>
+                                <p>Manufacturing</p>
+                                <img src="./img/loop_09.jpg">
+                            </li>
+                            <li>
+                                <p>Big Data</p>
+                                <img src="./img/loop_11.jpg">
+                            </li>
+                            <li>
+                                <p>E-commerce</p>
+                                <img src="./img/loop_01.jpg">
+                            </li>
+                            <li>
+                                <p>Healthcare</p>
+                                <img src="./img/loop_03.jpg">
+                            </li>
+                            <li>
+                                <p>Public Sector</p>
+                                <img src="./img/loop_05.jpg">
+                            </li>
+                            <li>
+                                <p>Game</p>
+                                <img src="./img/loop_07.jpg">
+                            </li>
+                            <li>
+                                <p>Manufacturing</p>
+                                <img src="./img/loop_09.jpg">
+                            </li>
+                            <li>
+                                <p>Big Data</p>
+                                <img src="./img/loop_11.jpg">
+                            </li>
+                            <li>
+                                <p>E-commerce</p>
+                                <img src="./img/loop_01.jpg">
+                            </li>
+                            <li>
+                                <p>Healthcare</p>
+                                <img src="./img/loop_03.jpg">
+                            </li>
+                            <li>
+                                <p>Public Sector</p>
+                                <img src="./img/loop_05.jpg">
+                            </li>
+                            <li>
+                                <p>Game</p>
+                                <img src="./img/loop_07.jpg">
+                            </li>
+                            <li>
+                                <p>Manufacturing</p>
+                                <img src="./img/loop_09.jpg">
+                            </li>
+                            <li>
+                                <p>Big Data</p>
+                                <img src="./img/loop_11.jpg">
+                            </li>
+                            <li>
+                                <p>E-commerce</p>
+                                <img src="./img/loop_01.jpg">
+                            </li>
+                            <li>
+                                <p>Healthcare</p>
+                                <img src="./img/loop_03.jpg">
+                            </li>
+                            <li>
+                                <p>Public Sector</p>
+                                <img src="./img/loop_05.jpg">
+                            </li>
+                            <li>
+                                <p>Game</p>
+                                <img src="./img/loop_07.jpg">
+                            </li>
+                            <li>
+                                <p>Manufacturing</p>
+                                <img src="./img/loop_09.jpg">
+                            </li>
+                            <li>
+                                <p>Big Data</p>
+                                <img src="./img/loop_11.jpg">
+                            </li>
+                            <li>
+                                <p>E-commerce</p>
+                                <img src="./img/loop_01.jpg">
+                            </li>
+                            <li>
+                                <p>Healthcare</p>
+                                <img src="./img/loop_03.jpg">
+                            </li>
+                            <li>
+                                <p>Public Sector</p>
+                                <img src="./img/loop_05.jpg">
+                            </li>
+                            <li>
+                                <p>Game</p>
+                                <img src="./img/loop_07.jpg">
+                            </li>
+                            <li>
+                                <p>Manufacturing</p>
+                                <img src="./img/loop_09.jpg">
+                            </li>
+                            <li>
+                                <p>Big Data</p>
+                                <img src="./img/loop_11.jpg">
                             </li>
                         </ul>
+                    </div>
+                    <!-- Mobile 롤링 이미지 애니메이션 부분 -->
+                    <div class="m_cont_box_bottom">
+                        <div class="m_cont_box_line_1">
+                            <ul class="m_line_1">
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+
+                                <li>
+                                    <p>AI</p>
+                                    <img src="./img/mo_loop_02.jpg">
+                                </li>
+                                <li>
+                                    <p>Education</p>
+                                    <img src="./img/mo_loop_04.jpg">
+                                </li>
+                                <li>
+                                    <p>Finance</p>
+                                    <img src="./img/mo_loop_06.jpg">
+                                </li>
+                                <li>
+                                    <p>Media</p>
+                                    <img src="./img/mo_loop_08.jpg">
+                                </li>
+                                <li>
+                                    <p>Work</p>
+                                    <img src="./img/mo_loop_10.jpg">
+                                </li>
+                                <li>
+                                    <p>Hybrid Cloud</p>
+                                    <img src="./img/mo_loop_12.jpg">
+                                </li>
+                            </ul>
+                        </div>    
+                        <div class="m_cont_box_line_2">    
+                            <ul class="m_line_2">
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+
+                                <li>
+                                    <p>E-commerce</p>
+                                    <img src="./img/mo_loop_01.jpg">
+                                </li>
+                                <li>
+                                    <p>Healthcare</p>
+                                    <img src="./img/mo_loop_03.jpg">
+                                </li>
+                                <li>
+                                    <p>Public Sector</p>
+                                    <img src="./img/mo_loop_05.jpg">
+                                </li>
+                                <li>
+                                    <p>Game</p>
+                                    <img src="./img/mo_loop_07.jpg">
+                                </li>
+                                <li>
+                                    <p>Manufacturing</p>
+                                    <img src="./img/mo_loop_09.jpg">
+                                </li>
+                                <li>
+                                    <p>Big Data</p>
+                                    <img src="./img/mo_loop_11.jpg">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
     <!-- IT생태계 안내 부분 -->
-        <section>
+        <section id="section_3">
             <div class="cloud_ecosystem">
-                <div class="ecosystem_cont">
-                    <div class="ecosystem_cont_1">
+                <div class="ecosystem_cont_wrap">
+                    <div class="ecosystem_cont">
                         <div class="ecosystem_cont_text">
                             <p class="eyebrow">IT 생태계</p>
                             <h3>
-                                <span>모두가 함께 성장할 수 있는<br>
-                                클라우드 기반의<br>
-                                선순환 생태계를 구축합니다
+                                <span>모두가 함께 성장할 수 있는<br class="m_br_none">
+                                클라우드 기반의<br class="m_br_none">
+                                선순환 생태계를<br class="m_br"> 구축합니다
                             </h3>
+                            
                             <div class="white_btn">
                                 <a href="">IT 생태계 바로가기</a>
                             </div>
                         </div>
+
                         <div class="ecosystem_cont_img">
-                            <img src="./img/main_tree_icon.png">
+                            <img class="icon_img" src="./img/main_tree_icon.png">
                         </div>
                     </div>
+
                     <video autoplay muted loop >
                         <source src="./video/intro_ecosystem.mp4">
                     </video>
                 </div>
 
-                <div class="next_sect_btn">
-                    <button></button>
+                <div class="button-btn visible">
+                    <button type="button" class="mo-hide" id="subBtnNextOne">
+                        <span class="hide-txt">scroll down</span>
+                    </button>
                 </div>
+            </div>
 
+            <div class="m_cloud_ecosystem">
+                <div class="m_cloud_ecosystem_text">
+                    <p class="eyebrow">IT 생태계</p>
+                    <h3>
+                        <span>모두가 함께 성장할 수 있는<br class="m_br_none">
+                        클라우드 기반의<br class="m_br_none">
+                        선순환 생태계를<br class="m_br"> 구축합니다
+                    </h3>
+                </div>
+                <div class="m_cloud_ecosystem_img">
+                    <img src="img/main_tree_icon.png">
+                </div>
+                <div class="m_white_btn">
+                    <a href="">IT 생태계 바로가기</a>
+                </div>
             </div>
         </section>
 
     <!-- 네이버 새로운 소식 & 공지사항 -->
-        <section>
+        <section id="section_4">
             <div class="naver_news_wrap">
 
                 <div class="naver_news">
@@ -259,60 +872,72 @@
                     <ul class="news_cont">
                         <li class="news_cont_1">
                             <a href="">
-                                <div class="news_cont_img">
-                                    <div class="hover_dark_bg"></div>
-                                    <img src="./img/press_thumb_31.jpg">
-                                </div>
-                                <div class="news_cont_text">
-                                    <p>네이버클라우드, 썸에이지에 '게임팟'
-                                    클라우드 통합 서비스 제공</p>
-                                    <span>2021.03.05</span>
+                                <div class="news_cont_wrap">
+                                    <div class="news_cont_img">
+                                        <div class="cont_img_border"></div>
+                                        <div class="hover_dark_bg"></div>
+                                        <img src="./img/press_thumb_31.jpg">
+                                    </div>
+                                    <div class="news_cont_text">
+                                        <p>네이버클라우드, 썸에이지에 '게임팟'
+                                        클라우드 통합 서비스 제공</p>
+                                        <span>2021.03.05</span>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                         <li class="news_cont_2">
                             <a href="">
-                                <div class="news_cont_img">
-                                    <div class="hover_dark_bg"></div>
-                                    <img src="./img/press_thumb_30.jpg">
-                                </div>
-                                <div class="news_cont_text">
-                                    <p>네이버클라우드, 제주관광공사와 제주
-                                    스마트 관광 거버넌스 구축을 위해 손잡다</p>
-                                    <span>2021.03.03</span>
+                                <div class="news_cont_wrap">
+                                    <div class="news_cont_img">
+                                        <div class="cont_img_border"></div>
+                                        <div class="hover_dark_bg"></div>
+                                        <img src="./img/press_thumb_30.jpg">
+                                    </div>
+                                    <div class="news_cont_text">
+                                        <p>네이버클라우드, 제주관광공사와 제주
+                                        스마트 관광 거버넌스 구축을 위해 손잡다</p>
+                                        <span>2021.03.03</span>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                         <li class="news_cont_3">
                             <a href="">
-                                <div class="news_cont_img">
-                                    <div class="hover_dark_bg"></div>
-                                    <img src="./img/press_thumb_29.jpg">
-                                </div>
-                                <div class="news_cont_text">
-                                    <p>네이버클라우드, 한국사회적기업진흥원
-                                    클라우드 기반 인프라 구축...'디지털
-                                    역량' 강화 적극 지원 나서</p>
-                                    <span>2021.03.01</span>
+                                <div class="news_cont_wrap">
+                                    <div class="news_cont_img">
+                                        <div class="cont_img_border"></div>
+                                        <div class="hover_dark_bg"></div>
+                                        <img src="./img/press_thumb_29.jpg">
+                                    </div>
+                                    <div class="news_cont_text">
+                                        <p>네이버클라우드, 한국사회적기업진흥원
+                                        클라우드 기반 인프라 구축...'디지털
+                                        역량' 강화 적극 지원 나서</p>
+                                        <span>2021.03.01</span>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                         <li class="news_cont_4">
                             <a href="">
-                                <div class="news_cont_img">
-                                    <div class="hover_dark_bg"></div>
-                                    <img src="./img/press_thumb_28.jpg">
-                                </div>
-                                <div class="news_cont_text">
-                                    <p>AI활용 코로나19 신속 진단 핵심 기술
-                                    개발에 네이버클라우드 사용</p>
-                                    <span>2021.02.25</span>
+                                <div class="news_cont_wrap">
+                                    <div class="news_cont_img">
+                                        <div class="cont_img_border"></div>
+                                        <div class="hover_dark_bg"></div>
+                                        <img src="./img/press_thumb_28.jpg">
+                                    </div>
+                                    <div class="news_cont_text">
+                                        <p>AI활용 코로나19 신속 진단 핵심 기술
+                                        개발에 네이버클라우드 사용</p>
+                                        <span>2021.02.25</span>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                     </ul>
                     <div class="white_btn">
-                        <a href="">새로운 소식 더보기</a>
+                        <a href="./media/media_pressrelease/index.html">새로운 소식 더보기</a>
                     </div>
 
                     <!-- 네이버 공지사항 -->
@@ -331,7 +956,7 @@
                             <p class="eyebrow2">Career</p>
                             <div class="notice_cont_text">
                                 <p>클라우드를 '직접' 만듭니다<br>
-                                클라우스를 '함께' 만듭시다</p>
+                                클라우드를 '함께' 만듭시다</p>
                                 <div class="black_btn">
                                     <a href="">채용 바로가기</a>
                                 </div>
@@ -345,7 +970,7 @@
 
    <!-- 네이버 하단 내용 -->
    <footer>
-    <div class="footer_wrap">
+    <div class="pc_footer_wrap">
         
         <div class="footer_left">
             <img src="./img/footer_logo.png">
@@ -353,18 +978,20 @@
             <div class="naver_copyright">
                 <p>사업자등록번호 : 129-86-31394&nbsp;&nbsp;&nbsp;&nbsp;통신판매업신고번호 : 제2009-경기성남-0510호</p>
                 <p>대표이사 : 박원기&nbsp;&nbsp;&nbsp;&nbsp;주소 : 경기도 성남시 분당구 분당내곡로 117 10층 및 11층 네이버클라우드, 13529</p>
-                <p>&copy;NAVER Cloud Corp. All Right Reserved.</p>
+                <p>ⓒ NAVER Cloud Corp. All Rights Reserved.</p>
             </div>
 
             <div class="naver_etc_link">
                 <div class="naver_etc">
-                    <p><a href="https://www.navercloudcorp.com/lang/ko/ethics/">기업윤리 상담센터</a></p>
-                    <p><a href="https://www.navercloudcorp.com/lang/ko/privacy/">개인정보 처리방침</a></p>
+                    <a href="https://www.navercloudcorp.com/lang/ko/ethics/">기업윤리 상담센터</a>
+                    <a href="https://www.navercloudcorp.com/lang/ko/privacy/">개인정보 처리방침</a>
                 </div>
+            </div>
+            <div class="naver_social_wrap">
                 <ul class="naver_social">
                     <li><a href="https://blog.naver.com/n_cloudplatform">네이버 블로그</a></li>
                     <li><a href="https://www.facebook.com/navercloudplatform/">페이스북</a></li>
-                    <li><a href="https://tv.naver.com/ncloud">네이버 TV</a></li>
+                    <li><a href="https://tv.naver.com/ncloud">네이버TV</a></li>
                     <li><a href="https://www.youtube.com/channel/UC2wPiIf2xSXGTJNqo8UOY9g?view_as=subscriber">유튜브</a></li>
                     <li><a href="https://medium.com/naver-cloud-platform">미디엄</a></li>
                     <li><a href="https://www.linkedin.com/company/navercloud">링크드인</a></li>
@@ -405,7 +1032,93 @@
           </ul>
         </div>
     </div>
-</footer>
+
+    <div class="m_footer_wrap">
+       <img src="./img/footer_logo.png">
+       <div class="m_naver_social_wrap">
+        <ul class="m_naver_social">
+            <li>
+                <a href="https://blog.naver.com/n_cloudplatform">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/navercloudplatform/">
+                </a>
+            </li>
+            <li>
+                <a href="https://tv.naver.com/ncloud">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UC2wPiIf2xSXGTJNqo8UOY9g?view_as=subscriber">
+                </a>
+            </li>
+            <li>
+                <a href="https://medium.com/naver-cloud-platform">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/navercloud">
+                </a>
+            </li>
+        </ul>
+
+        <div class="m_footer_right">
+            <button id="m_footer_btn" type="button">
+                관계사 바로가기
+             </button>
+            <ul class="clfix">
+             <li>
+                <a href="https://www.navercorp.com" target="_blank">
+                   네이버                                          
+                </a>
+             </li>
+             <li>
+                <a href="https://www.naverlabs.com/" target="_blank">
+                   네이버 랩스                                          
+                </a>
+             </li>
+             <li>
+                <a href="https://naver.worksmobile.com/" target="_blank">
+                   웍스모바일                                          
+                </a>
+             </li>
+             <li>
+                <a href="https://linepluscorp.com/" target="_blank">
+                   라인                                          
+                </a>
+             </li>
+             <li>
+                <a href="https://clova.ai/ko/" target="_blank">
+                   네이버 클로바                                          
+                </a>
+             </li>
+          </ul>
+        </div>
+
+        <div class="naver_etc_link">
+            <div class="naver_etc">
+                <a href="https://www.navercloudcorp.com/lang/ko/ethics/">기업윤리 상담센터</a>
+                <a href="https://www.navercloudcorp.com/lang/ko/privacy/">개인정보 처리방침</a>
+            </div>
+        </div>
+
+        <div class="naver_copyright">
+            <p><span>사업자등록번호 :</span> 129-86-31394</p>
+            <p><span>통신판매업신고번호 :</span> 제2009-경기성남-0510호</p>
+            <p><span>대표이사 :</span> 박원기</p>
+            <p><span>주소 :</span> 경기도 성남시 분당구 분당내곡로 117<br>
+                10층 및 11층 네이버클라우드, 13529</p>
+            <p>ⓒ NAVER Cloud Corp. All Rights Reserved.</p>
+        </div>
+
+
+    </div>
+    </div>
+   </footer>
 <script src="js/cloud.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/header.js"></script>
+
 </body>
 </html>

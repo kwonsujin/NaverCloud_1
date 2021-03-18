@@ -52,5 +52,6 @@ h3 {
     font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
     font-size: 48px;
     line-height: 68px;
+    letter-spacing: -1px;
 }
 

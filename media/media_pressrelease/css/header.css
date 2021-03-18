@@ -1,8 +1,11 @@
+/* 서브 페이지 헤더 */
+
 .header_wrap {
     width: 100%;
     height: auto;
     position: fixed;
     z-index: 999;
+    background-color: rgb(255, 255, 255);
 }
 
 .header { 
@@ -17,15 +20,11 @@
 
 .gnb_logo #logo { 
     display: inline-block;
-    background-image: url(../img/main_logo_w.svg);
+    background-image: url(../img/main_logo.svg);
     background-size: contain;
     width: 182px;
     height: 20px;
     background-repeat: no-repeat;
-}
-
-.gnb_logo #logo.green {
-    background-image: url(../img/main_logo.svg);  
 }
 
 .gnb_menu_wrap {
@@ -44,24 +43,19 @@ padding: 0 12px 0 24px; }
     font-size: 16px;
     font-weight: 700;
     line-height: 20.8px;
-    color: rgb(255, 255, 255);
+    color: rgb(170, 170, 170);
     transition-duration: 0.3s;
     position: relative;
 }
 
-.gnb_menu_item .item.gray{
-    color: rgb(170, 170, 170);
-}
-
-/* 홈 hover 유지(?)---------------------- */
-.gnb_menu_item:nth-child(1) a { 
+/* 미디어 hover 유지(?)---------------------- */
+.gnb_menu_item:nth-child(4) a { 
     color: rgb(3, 199, 90);
 }
-
-.gnb_menu_item:nth-child(1) a:after {
+.gnb_menu_item:nth-child(4) a:after {
     display: block;
     content: '';
-    width: 14px;
+    width: 45px;
     height: 2px;
     background-color: rgb(3, 199, 90);
     position: absolute;
@@ -81,7 +75,6 @@ padding: 0 12px 0 24px; }
     visibility: hidden;
     transition-duration: 0.3s; opacity: 0;
 }
-
 .gnb_menu_item a:hover span { 
     visibility: visible;
     opacity: 1;
@@ -91,19 +84,14 @@ padding: 0 12px 0 24px; }
     margin: 0 0 0 66px;
     position: relative;
 }
-
 .gnb_lang #lang_img { 
     display: block;
-    background-image: url(../img/global_icon_w.png);
+    background-image: url(../img/global_icon_b.png);
     width: 24px;
     height: 24px;
     margin:-2px 0 0 0;
     background-size: cover;
     transition-duration: 0.3s;
-}
-
-.gnb_lang #lang_img.black {
-    background-image: url(../img/global_icon_b.png);
 }
 
 .gnb_lang #lang_img:hover { background-image: url(../img/global_icon_g.png); }
@@ -119,13 +107,11 @@ padding: 0 12px 0 24px; }
     border-radius: 8px;
     display: none;
 }
-
 .gnb_lang ul li a.active {
     background-color: rgb(3, 199, 90);
     font-weight: 700;
     color:rgb(255, 255, 255);
 }
-
 .gnb_lang ul li a {
     display: block;
     padding: 8px 16px;
@@ -148,22 +134,14 @@ padding: 0 12px 0 24px; }
 
 .m_header_wrap { display: none; }
 
-@keyframes bar_opacity {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
 
-
-@media screen and (max-width: 1600px) {
-    .header { 
-        padding: 29px 90px;
+@media screen and (max-width: 1596px) {
+    .header {
         margin: 0 auto;
-        max-width: 1476px;
+        padding: 29px 90px;
+        max-width: 1476px;   
     }
 }
-
-
-
 
 @media screen and (max-width: 1280px) {
     .header_wrap {
@@ -177,6 +155,8 @@ padding: 0 12px 0 24px; }
         display: block;
         justify-content: space-between;
         padding: 0 90px;
+        height: 59px;
+        background-color: rgb(255, 255, 255);
     }
 
     .m_header {
@@ -188,30 +168,8 @@ padding: 0 12px 0 24px; }
         padding: 21px 0;
     }
 
-    /* .m_gnb_logo a:nth-child(1) {
+    .m_gnb_logo a:nth-child(1) {
         display: block;
-        background-image: url(../img/main_logo_w.svg);
-        background-size: contain;
-        width: 144px;
-        height: 17px;
-        background-repeat: no-repeat;
-    } */
-
-    .m_gnb_logo #m_gnb_logo_w {
-        display: block;
-        background-image: url(../img/main_logo_w.svg);
-        background-size: contain;
-        width: 144px;
-        height: 17px;
-        background-repeat: no-repeat;
-    }
-
-    .m_gnb_logo #m_gnb_logo_w.mgreen {
-        background-image: url(../img/main_logo.svg);
-    }
-
-    .m_gnb_logo a:nth-child(2) {
-        display: none;
         background-image: url(../img/main_logo.svg);
         background-size: contain;
         width: 144px;
@@ -223,9 +181,9 @@ padding: 0 12px 0 24px; }
         display: flex;
     }
 
-    .m_gnb_lang #m_lang_img {
+    .m_gnb_lang .lang_img {
         display: inline-block;
-        background-image: url(../img/global_icon_w.png);
+        background-image: url(../img/global_icon_b.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 24px;
@@ -233,14 +191,17 @@ padding: 0 12px 0 24px; }
         margin: -3.5px 0 0 0;
     }
 
-    .m_gnb_lang #m_lang_img.mblack {
-        background-image: url(../img/global_icon_b.png);
+    .gnb_lang .lang_img:hover { 
+        background-image: url(../img/global_icon_g.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
 
     .m_gnb_lang ul {
         position: absolute;
         top: 50px;
-        right: 10%;
+        right: 12%;
         width: 112px;
         padding: 12px;
         background-color: rgb(255, 255, 255);
@@ -280,17 +241,13 @@ padding: 0 12px 0 24px; }
         margin: 0 0 0 20px;
     }
 
-    .m_gnb_menu #gnb_m_menuopen {
-        background-image: url(../img/m_menu.svg);
+    .m_gnb_menu span:nth-child(1) {
+        background-image: url(../img/m_menu_b.svg);
         width: 20px;
         height: 20px;
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
-    }
-
-    .m_gnb_menu #gnb_m_menuopen.mblack2 {
-        background-image: url(../img/m_menu_b.svg);
     }
 
     .m_gnb_menu span:nth-child(2) {
@@ -366,9 +323,6 @@ padding: 0 12px 0 24px; }
     }
 }
 
-
-
-
 @media screen and (max-width: 1024px) {
     .m_header_wrap {
         padding: 0 30px;
@@ -383,15 +337,8 @@ padding: 0 12px 0 24px; }
     }
 }
 
-
-
-
 @media screen and (max-width: 767px) {
     .m_header_wrap {
         padding: 0 24px;
-    }
-
-    .m_gnb_lang ul {
-        right: 10%;
     }
 }
