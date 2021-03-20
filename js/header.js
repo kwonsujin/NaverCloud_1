@@ -87,15 +87,6 @@ langButton.addEventListener('click', () => {
 
 
 // Mobile 지구본 아이콘 - 언어부분
-function doDisplay() {
-   var con = document.querySelector('#mlangUL');
-   if(con.style.display === 'none') {
-      con.style.display ="block";
-   }
-   else {
-      con.style.display = "none";
-   }
-}
 
 
 
