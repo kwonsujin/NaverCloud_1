@@ -87,16 +87,24 @@ langButton.addEventListener('click', () => {
 
 
 // Mobile 지구본 아이콘 - 언어부분
-function doDisplay() {
-   var con = document.querySelector('#mlangUL');
-   if(con.style.display === 'none') {
-      con.style.display ="block";
-   }
-   else {
-      con.style.display = "none";
-   }
-}
+var mheaderLang = document.querySelector('.m_gnb_lang');
+var mlangButton = document.querySelector('#m_lang_img');
+var mglobal = document.querySelector('.mlang_nav');
 
+var mglobalOpen = false;
+
+mlangButton.addEventListener('click', () => {
+   if(mglobalOpen){
+      mheaderLang.classList.remove('active');
+      mglobal.style.display = 'none';
+      mglobalOpen = false;
+   }
+   else{
+      mheaderLang.classList.add('active');
+      mglobal.style.display = 'block';
+      mglobalOpen = true;
+   }
+})
 
 
 // 모바일 메뉴 열기 닫기
