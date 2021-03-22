@@ -297,7 +297,7 @@ padding: 0 12px 0 24px; }
         background-image: url(../img/close_btn.png);
         width: 28px;
         height: 28px;
-        margin: -5px 0 0 0;
+        margin: -5px -5px 0 0;
         background-size: contain;
         background-repeat: no-repeat;
         display: none;

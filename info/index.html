@@ -13,7 +13,7 @@
    <meta property="og:image" content="/lang/images/og_image.png">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/footer.css">
 
@@ -23,108 +23,133 @@
     <title>NAVER Cloud 네이버클라우드</title>
 </head>
 <body>
-    <header>
-        <div class="navbar_wrap">
-            <div class="navbar" style="border: 1px solid yellow;">
-                <div class="logo_box">
-                    <h1>
-                        <a href="../index.html"></a>
-                    </h1>
+
+       <!-- 네이버 상단 header 부분 -->
+   <header>
+    <!-- PC gnb 메뉴 부분 -->
+    <nav class="header_wrap" id="navbar">
+       <div class="header">
+          <div class="gnb_logo">
+             <a id="logo" href="../index.html"></a>
+          </div>
+
+          <div class="gnb_menu_wrap">
+             <ul class="gnb_menu">
+                   <li class="gnb_menu_item">
+                      <a class="item" href="../index.html">홈</a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="./index.html">소개</a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="../cloud/index.html">클라우드</a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="../media/media_pressrelease/index.html">미디어</a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="">채용<span></span></a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="">제휴<span></span></a>
+                   </li>
+                   <li class="gnb_menu_item">
+                      <a class="item" href="">네이버클라우드 플랫폼<span></span></a>
+                   </li>
+             </ul>
+             
+             <div class="gnb_lang">
+                   <a id="lang_img" href="javascript:"></a>
+                   <ul id="langUL">
+                      <li>
+                         <a href="" class="active">한국어</a>
+                      </li>
+                      <li>
+                         <a href="" class="en">English</a>
+                      </li>
+                      <li>
+                         <a href="" class="jp">日本語</a>
+                      </li>
+                   </ul>
+             </div>
+
+          </div>
+       </div>
+    </nav>
+
+
+    <!-- Mobile gnb 메뉴 부분 -->
+    <nav class="m_header_wrap">
+        <div>
+            <div class="m_header">
+                <div class="m_gnb_logo">
+                    <a class="m_gnb_logo_g" href="../index.html"></a>
                 </div>
-                <div class="header_nav">
-                    <ul class="clfix">
-                        <li>
-                            <div class="nav_item">
-                                <a href="../index.html">홈</a>
-                            </div>
-                        </li>
-                        <li class="active">
-                            <div class="nav_item">
-                                <a href="./index.html">소개</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="nav_item">
-                                <a href="../cloud/index.html">클라우드</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="nav_item">
-                                <a href="../media/media_pressrelease/index.html">미디어</a>
-                            </div>
-                        </li>
-                        <li class="out_link">
-                            <div class="nav_item">
-                                <a href="">
-                                채용
-                                <i>outlinkicon</i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="out_link">
-                            <div class="nav_item">
-                                <a href="">
-                                제휴
-                                <i>outlinkicon</i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="out_link">
-                            <div class="nav_item">
-                                <a href="">
-                                네이버 클라우드 플랫폼
-                                <i>outlinkicon</i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="lang_cont">
-                        <a href="javascript:" class="lang_btn"></a>
+
+                <div class="m_lang_menu_wrap">
+                    <div class="m_gnb_lang">
+                        <a class="m_lang_img" href="javascript:"></a>
+                        <ul id="mlang_nav">
+                            <li>
+                                <a href="" class="active">한국어</a>
+                            </li>
+                            <li>
+                                <a href="" class="en">English</a>
+                            </li>
+                            <li>
+                                <a href="" class="jp">日本語</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="lang_nav">
-                        <li><a href="" class="active">한국어</a></li>
-                        <li><a href="" class="en">English</a></li>
-                        <li><a href="" class="jp">日本語</a></li>
-                    </ul>
+
                     <div class="m_gnb_menu">
                         <span onclick="menuOpen()" id="gnb_m_menuopen"></span>
                         <span onclick="menuClose()" id="gnb_m_menuclose"></span>
                     </div>
                 </div>
             </div>
-            <ul class="m_menu_sub" style="border: 1px solid red;">
-                <li><a href="">홈</a></li>
-                <li><a href="">소개</a></li>
-                <li><a href="">클라우드</a></li>
-                <li><a href="">미디어</a></li>
+            <ul class="m_menu_sub">
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="../info/index.html">소개</a></li>
+                <li><a href="../cloud/index.html">클라우드</a></li>
+                <li><a href="../media/media_pressrelease/index.html">미디어</a></li>
                 <li><a href="">채용</a></li>
                 <li><a href="">제휴</a></li>
                 <li><a href="">네이버 클라우드 플랫폼</a></li>
             </ul>
         </div>
-    
+    </nav>
+   </header>
+
+
     <!--tit -->
     <div class="tit">
-            <div class="tit_wrap">
-                <h2>고객과 가장 가까운 곳에서<br>
-                    비즈니스의 성공을 <br class="m_br"> 만들어 갑니다
-                </h2>
-            </div>
+        <div class="tit_wrap">
+            <h2>고객과 가장 가까운 곳에서<br>
+                비즈니스의 성공을 <br class="m_br"> 만들어 갑니다
+            </h2>
         </div>
-        <!-- sub_header -->
-        <section class="navigation">
-            <nav id="sub_nav" class="sub_header">
-                <ul>
-                    <li><a href="" class="btn01 pc active">기업 소개</a></li>
-                    <li><a href="" class="pc active">IT 생태계</a></li>
-                    <li><a href="" class="pc active">주요 연혁</a></li>
-                    <li><a href="" class="pc active">회사 정보</a></li>
-                    <li><a href="" class="pc active">위치</a></li>
-                    <li><a href="" class="pc active">주요 관계사</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+    </div>
+    <!-- sub_header -->
+    <section class="navigation">
+        <nav id="sub_nav" class="sub_header">
+            <ul>
+                <li><a href="" class="btn01 pc active">기업 소개</a></li>
+                <li><a href="" class="pc active">IT 생태계</a></li>
+                <li><a href="" class="pc active">주요 연혁</a></li>
+                <li><a href="" class="pc active">회사 정보</a></li>
+                <li><a href="" class="pc active">위치</a></li>
+                <li><a href="" class="pc active">주요 관계사</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+
+
+
+
+
     <div class="container fullpage-wrapper">
         <!-- 기업소개 -->
         <div class="introduction">
@@ -1142,5 +1167,6 @@
         <a id="go-top" class="pc" href=""></a>
     </div>
     <script src="JS/info.js" defer></script>
+    <script src="../media/media_pressrelease/js/header.js" defer></script>
 </body>
 </html>

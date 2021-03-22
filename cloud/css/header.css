@@ -33,17 +33,17 @@ header .header-wrap .box {
    position: relative;
 }
 header .header-wrap h1 {
-   width: 182px;
-   height: 20px;
    display: inline-block;
 }
+
 header .header-wrap h1 a { 
    display: block;
-   width: 100%;
-   height: 100%;
+   width: 182px;
+   height: 20px;
    background: url(../img/main_logo.svg) no-repeat;
    background-size: contain;
 }
+
 header .header-wrap .header-nav {
    position: relative;
    float: right;
@@ -168,6 +168,12 @@ header .header-wrap .header-nav .lang-cont ul li:nth-child(2) a.en {
    font-weight: 600;
    letter-spacing: 0;
 }
+
+.lang-cont ul li .jp {
+   font-family: "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic Pro",
+   sans-serif;
+}
+
 header.on .header-wrap .header-nav .lang-cont ul li a.active {
    color: #fff;
    background-color: #03c75a;
